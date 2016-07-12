@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--
+	作者：867444211@qq.com
+	时间：2016-04-14
+	描述：
+
+在画布上创建介于两个切线之间的弧：arcto()
+-->
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<canvas id='canvas' width="800" height="800"></canvas>
+		<script>
+			var c=document.getElementById("canvas");
+var ctx=c.getContext("2d");
+ctx.beginPath();
+ctx.beginPath();
+ctx.moveTo(20,20);           // 创建开始点
+ctx.lineTo(100,20);          // 创建水平线
+ctx.arcTo(150,20,150,70,50); // 创建弧
+ctx.lineTo(150,120);         // 创建垂直线
+ctx.stroke(); 
+		</script>
+	</body>
+</html>

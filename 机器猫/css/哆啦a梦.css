@@ -1,0 +1,141 @@
+
+
+* {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+}
+:focus {
+    outline: 0 none;
+}
+label {
+    cursor: pointer;
+}
+img {
+    vertical-align: middle;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+}
+h1 {
+    font-size: 16px;
+}
+h2, h3, h4 {
+    font-size: 14px;
+}
+h5, h6 {
+    font-size: 12px;
+}
+abbr, acronym {
+    border: 0 none;
+    font-variant: normal;
+}
+address, caption, cite, code, dfn, em, th, var, optgroup {
+    font-style: normal;
+    font-weight: normal;
+}
+input, button, textarea, select, optgroup, option {
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+}
+input, button, textarea, select {
+}
+a, img {
+    border: 0 none;
+}
+a, a:visited {
+    color: #5e5e5e;
+    text-decoration: none;
+}
+a:hover {
+    color: #4183c4;
+    text-decoration: underline;
+}
+.clear {
+    clear: both;
+    display: block;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    overflow: hidden;
+}
+.clearfix::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.clearfix {
+    display: inline-table;
+}
+.clearfix {
+    display: block;
+}
+* + html .clearfix {
+    min-height: 1%;
+}
+body {
+    background: #fff none repeat scroll 0 0;
+    color: #333;
+    font: 12px/180% Arial,Lucida,Verdana,"ËÎÌå",Helvetica,sans-serif;
+}
+.shortcut {
+    background: #eee none repeat scroll 0 0;
+    border-bottom: 1px solid #dddddd;
+    box-shadow: 1px 0 2px rgba(0, 0, 0, 0.2);
+    font-size: 12px;
+    height: 32px;
+    line-height: 32px;
+    text-transform: uppercase;
+}
+.shortcut h1 {
+    font-family: "Î¢ÈíÑÅºÚ","ËÎÌå";
+    font-size: 14px;
+}
+.shortcut a, .shortcut h1 {
+    color: #333;
+    display: block;
+    float: left;
+    height: 32px;
+    letter-spacing: 1px;
+    overflow: hidden;
+    padding: 0 10px;
+    text-shadow: 0 1px 1px #fff;
+    width: 360px;
+}
+.shortcut a:hover {
+    background: #fff none repeat scroll 0 0;
+}
+.shortcut span.right {
+    display: inline-block;
+    float: right;
+    height: 15px;
+    margin: 8px 5px 0 0;
+    overflow: hidden;
+    width: 468px;
+}
+.shortcut .close {
+    background: rgba(0, 0, 0, 0) url("/Public/images/close-demo.gif") no-repeat scroll 0 0;
+    display: inline-block;
+    float: right;
+    height: 20px;
+    line-height: 99em;
+    margin: 6px 10px 0;
+    overflow: hidden;
+    padding: 0;
+    transition: all 0.3s ease-out 0s;
+    width: 20px;
+}
+.shortcut .close:hover {
+    background: rgba(0, 0, 0, 0) url("/Public/images/close-demo.gif") no-repeat scroll 0 -20px;
+}
+.shortcut .close:active {
+    background: rgba(0, 0, 0, 0) url("/Public/images/close-demo.gif") no-repeat scroll 0 -40px;
+}

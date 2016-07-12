@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<!--
+    	作者：867444211@qq.com
+    	时间：2016-04-14
+    	描述：
+    	调用js函数
+    <body onload="drawTwoArcs()"> 
+                                  
+		<canvas width = "400" height = "400" id = "canvas" style = "border:black 1px solid;"></canvas>
+		<script> 
+		 var ct=document.getElementById('canvas').getContext('2d');
+		 function drawTwoArcs(){
+		 	ct.beginPath();
+		 	ct.arc(300,190,150,0,Math.PI*2,false);
+		 	ct.arc(300,190,100,0,Math.PI*2,true);
+		 	ct.fillStyle='#6495ED';
+		 	ct.fill();
+		 	
+		 	ct.shadowColor=undefined;
+		 	ct.shadowOffsetX=0;
+		 	ct.shadowOffsetY=0;
+		 	 ct.strokeStyle='#6495ED';
+		 	ct.stroke();//多条横线：当使用arc（）方法向当前路径增加子路径，该方法必须将上一条子路径终点与所画弧的起点相连接
+		 }
+		
+		</script>
+	</body>
+	-->
+	<body>
+	
+	<!--
+    	作者：867444211@qq.com
+    	时间：2016-04-14
+    	描述：
+    <script>
+		var ct=document.getElementById('canvas').getContext('2d');
+		function drawCutouts(){
+			ct.beginPath();
+			addOuterRectanglePath();
+			addCirclePath();
+			addRectanglePath();
+			addTrianglePath();
+			ct.fill(); 
+		}
+    </script>
+ -->
+ <canvas id="canvas" style="border:1px solid  skyblue; display:block;margin:5px auto;"></canvas>
+  <script type="text/javascript">
+    var canvas=document.getElementById("canvas");
+    canvas.width=800;
+    canvas.height=800;
+    var context=canvas.getContext("2d");
+    context.beginPath();
+
+    context.rect(100,100,600,600);
+    pathRect(context,200,200,400,200);
+    pathTriangle(context,300,450,150,650,450,650);
+
+    context.arc(550,550,100,0,Math.PI*2,true);
+    context.closePath();
+
+    context.fillStyle="#058";
+    context.shadowColor="gray";
+    context.shadowOffsetX=10;
+    context.shadowOffsetY=10;
+    context.shadowBlur=10;
+    context.fill();
+
+   //逆时针画矩形
+   function pathRect(cxt,x,y,width,height){
+    cxt.moveTo(x,y);
+    cxt.lineTo(x,y+height);
+    cxt.lineTo(x+width,y+height);
+    cxt.lineTo(x+width,y);
+    cxt.lineTo(x,y);
+   }
+
+  function pathTriangle(cxt,x1,y1,x2,y2,x3,y3){
+    cxt.moveTo(x1,y1);
+    cxt.lineTo(x2,y2);
+    cxt.lineTo(x3,y3);
+    cxt.lineTo(x1,y1);
+   }  	
+	</script>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<canvas id="canvas" width="800" height="800"></canvas>
+		<script>
+			var context=document.getElementById('canvas').getContext('2d');
+			 
+               context.beginPath();
+               context.rect(40,300,220,200);
+               //context.arc(150,300,100,0*Math.PI,2*Math.PI,true);
+               context.stroke();
+			 //绘制半圆弧
+               context.beginPath();
+            //在(100,300)处逆时针画一个半径为40，角度从0到180°的弧线
+            context.arc(100,300,40,0*Math.PI,1*Math.PI,true); //PI的弧度是180°
+            context.stroke();
+            //画一个实心圆
+            context.beginPath();
+           //在(100,300)处逆时针画一个半径为30，角度为0到360°的弧
+           context.arc(100,300,30,0*Math.PI,2*Math.PI,true);//2*Math.PI是360°
+           context.fill();
+
+           context.beginPath();
+           context.arc(200,300,40,0*Math.PI,1*Math.PI,true);
+           context.stroke();
+           context.beginPath();
+           context.arc(200,300,30,0*Math.PI,2*Math.PI,true);
+           context.fill();
+		</script>
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>patterns</title>
+		<style>
+		#canvas{
+			background:#eeeeee;
+			border:thin solid cornflowerblue;
+		}
+		#radio{
+			padding:10px;
+		}
+		</style>
+	</head>
+	<body>
+		<div id='radios'>
+			<input type="radio"   id="repeatRadio" name='patternRadio'  />repeat
+			<input type="radio"   id="repeatXRadio" name='patternRadio' />repeat-x
+			<input type="radio"   id="repeatYRadio" name="patternRadio"/>repeat-y
+			<input type="radio"   id="norepeatRadio" name="patternRadio" />no repeat
+		</div>
+		<canvas id="canvas" width="450" height="275">
+			canvas not supported
+		</canvas>
+		<script>
+			var canvas=document.getElementById('canvas'),
+			ctx=canvas.getContext('2d'),
+			repeatRadio=document.getElementById('repeatRadio'),
+			repeatXRadio=document.getElementById('repeatXRadio'),
+			repeatYRadio=document.getElementById('repeatYRadio'),
+			norepeatRadio=document.getElementById('norepeatRadio');
+			
+			
+		</script>
+	</body>
+</html>

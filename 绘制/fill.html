@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>   
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<canvas id="canvas" width="600" height="350" style="border: 1px solid aliceblue;"></canvas>
+		<script>
+		var c=document.getElementById("canvas");
+		var ctx=c.getContext('2d');
+		/*my_grad=ctx.createLinearGradient(30,30,0,270);
+		my_grad.addColorStop(0,'black');
+		my_grad.addColorStop(0.5,'grey');
+		my_grad.addColorStop(1,'white')
+		ctx.rect(30,30,550,200);
+		ctx.fillStyle=my_grad;//用渐变填充
+		ctx.fill();
+	    */
+	   // 创建渐变
+       /*var gradient=ctx.createLinearGradient(0,0,c.width,0);
+       gradient.addColorStop("0","magenta");
+       gradient.addColorStop("0.5","blue");
+       gradient.addColorStop("1.0","red");
+       // 用渐变进行填充
+       ctx.strokeStyle=gradient;
+       ctx.strokeText("Big smile!",50,100);*/
+       //创建路径：
+     /* ctx.beginPath();//起始一条路径
+      ctx.lineWidth="5";//线宽
+      ctx.strokeStyle="red"; // 红色路径
+      ctx.moveTo(20,75);  //把路径移动到指定点 不创建线条
+      ctx.lineTo(100,175);
+      ctx.lineTo(20,175);//顺序有影响
+      */
+      //添加一个新点    lineTo() 方法添加一个新点，然后创建从该点到画布中最后指定点的线条（该方法并不会创建线条
+      //closePath(); 从当前点到开始点。
+      //clip();作用是什么  
+      //ctx.stroke();
+     /*
+     ctx.lineJoin='round';
+    ctx.lineWidth=30;
+    ctx.font='24px Helvetica';
+    ctx.fillStyle='aquamarine';//顺序有影响
+    ctx.fillText('hello canvas',175,40);
+    */
+    ctx.lineJoin='round';//圆角矩形
+    ctx.lineWidth='30';
+    ctx.font='24px Helvetica';
+    ctx.fillText('click any where to erase',175,200);
+    //ctx.strokeStyle='cadetblue';
+    ctx.strokeStyle='silver';
+    
+ 
+    ctx.fillStyle='rgba(0,0,255,0.2)';
+    ctx.strokeRect(75,100,200,200);//描边
+    ctx.fillRect(325,100,200,200);//填充
+    ctx.canvas.onmousedown=function(){
+    	ctx.clearRect(0,0,canvas.width,canvas.height);
+    }
+    
+    
+    
+    
+    
+		</script>
+	</body>
+</html>

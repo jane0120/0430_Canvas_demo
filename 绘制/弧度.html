@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	<canvas id="canvas" width="600" height="450"></canvas>
+	<script>
+		var ctx=document.getElementById('canvas').getContext('2d');
+		/*ctx.beginPath();
+		ctx.arc(150,370,60,0,Math.PI*0.3,true);
+		ctx.closePath();
+		ctx.stroke();
+		*/
+		ctx.beginPath();
+		ctx.rect(10,10,100,100);
+		ctx.stroke();
+		ctx.beginPath();//去掉会重绘第一个路径
+		ctx.rect(50,50,100,100);
+		ctx.stroke();
+		//非零环绕原则
+	
+	</script>
+	</body>
+</html>
